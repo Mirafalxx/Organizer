@@ -65,7 +65,7 @@ router.post("/", (req, res) => {
             res.json({ token: token });
           })
           .catch(err => {
-            res.send("error: " + err);
+            res.send("error1: " + err);
           });
       } else {
         res.json({ error: "Users already exists" });
