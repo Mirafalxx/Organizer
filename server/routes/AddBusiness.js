@@ -9,7 +9,10 @@ router.post("/", async (req, res) => {
       const response = await BusinessList.create(List);
 
       if (response)
-        res.status(200).send({ message: "Successfully added " + List });
+        res.status(200).send({
+          message: "Successfully added " + JSON.stringify(List)
+        });
+      console.log(List);
     } else {
       res.status(400).send({
         error: "Not enough data to add song"

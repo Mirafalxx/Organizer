@@ -8,6 +8,14 @@ import { OrganizerComponent } from "./organizer/organizer.component";
 import { MomentPipe } from "./shared/moment.pipe";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { RegistrationComponent } from "./registration/registration.component";
+import {
+  NoopAnimationsModule,
+  BrowserAnimationsModule
+} from "@angular/platform-browser/animations";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatButtonModule } from "@angular/material/button";
+import { MyDialogComponent } from "./my-dialog/my-dialog.component";
 
 @NgModule({
   declarations: [
@@ -15,9 +23,21 @@ import { HttpClientModule } from "@angular/common/http";
     CalendarComponent,
     SelectorComponent,
     OrganizerComponent,
-    MomentPipe
+    MomentPipe,
+    RegistrationComponent,
+    MyDialogComponent
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    NoopAnimationsModule,
+    MatDialogModule,
+    MatButtonModule
+  ],
+  entryComponents: [MyDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

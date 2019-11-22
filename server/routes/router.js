@@ -13,7 +13,6 @@ const GetTodoList = require("./GetBusinessList");
 /* POST REQUESTS*/
 
 router.use("/register", RegistrationUser);
-
 router.use("/login", Login);
 router.use("/addBusiness", AddBusiness);
 /* POST REQUESTS*/
